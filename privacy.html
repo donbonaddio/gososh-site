@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — GoSosh</title>
+<meta name="description" content="GoSosh privacy policy — no servers, no analytics, no tracking.">
+<link rel="icon" type="image/png" href="icon.png">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --text-dim: #555555;
+    --text-faint: #888888;
+    --accent: #b8941f;
+    --border: #e6e6e6;
+    --bg-card: #fafafa;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0d0d;
+      --text: #f0f0f0;
+      --text-dim: #b0b0b0;
+      --text-faint: #777777;
+      --accent: #d4af37;
+      --border: #2a2a2a;
+      --bg-card: #1a1a1a;
+    }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  header {
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 24px;
+  }
+  .header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .header-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+  .header-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .header-title a { color: var(--text); }
+  .header-spacer { flex: 1; }
+  .header-back {
+    font-size: 14px;
+    color: var(--text-dim);
+  }
+
+  /* Article */
+  article {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+  }
+
+  .effective-date {
+    color: var(--text-dim);
+    font-size: 15px;
+    margin-bottom: 40px;
+    font-weight: 500;
+  }
+
+  .lead {
+    font-size: 18px;
+    color: var(--text-dim);
+    margin-bottom: 32px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    letter-spacing: -0.01em;
+  }
+
+  h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  p { margin-bottom: 16px; color: var(--text); }
+
+  ul { margin: 0 0 16px 24px; }
+  li { margin-bottom: 8px; color: var(--text); }
+
+  strong { font-weight: 600; }
+
+  .contact-block {
+    margin-top: 16px;
+    padding: 16px 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .contact-block p { margin-bottom: 4px; }
+
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-faint);
+    font-size: 13px;
+    text-align: center;
+  }
+  footer a { color: var(--text-dim); margin: 0 12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html"><img src="icon.png" alt="GoSosh" class="header-icon"></a>
+    <a href="index.html" class="header-title">GoSosh</a>
+    <div class="header-spacer"></div>
+    <a href="index.html" class="header-back">&larr; Home</a>
+  </div>
+</header>
+
+<article>
+  <h1>Privacy Policy</h1>
+  <p class="effective-date">Effective date: [DATE OF FIRST PUBLIC RELEASE]</p>
+
+  <p class="lead">GoSosh is built with the principle that personal data should stay personal. This policy explains, in plain language, what we collect, what we don't, and what we do with anything we touch.</p>
+
+  <h2>Summary</h2>
+  <ul>
+    <li>We don't have servers. There's nothing for us to "collect."</li>
+    <li>The subjects you track and your settings sync through your own iCloud account.</li>
+    <li>We do not have analytics, tracking pixels, advertising SDKs, or any third-party data collection in this app.</li>
+    <li>When you ask GoSosh to find mentions of a subject, the app queries publicly available data sources directly from your device. We never see those queries.</li>
+  </ul>
+
+  <h2>What GoSosh stores</h2>
+
+  <h3>On your device</h3>
+  <ul>
+    <li>The cards you create (subject + lens + cadence + per-source overrides).</li>
+    <li>Your YouTube Data API key, if you've added one in Settings.</li>
+    <li>Your subscription entitlement state, as reported by Apple's StoreKit.</li>
+    <li>Your app preferences (default cadence, source toggles, onboarding state).</li>
+  </ul>
+
+  <h3>In your private iCloud database (synced across your Apple devices only)</h3>
+  <ul>
+    <li>The same card data above, replicated for cross-device sync.</li>
+    <li>We do not have access to your iCloud private database. Only you (and your Apple ID's signed-in devices) can read it.</li>
+  </ul>
+
+  <h2>What GoSosh sends, and where</h2>
+  <p>When the app refreshes a card, it sends a query to public data sources:</p>
+  <ul>
+    <li><strong>Google News</strong> — RSS feed query at <code>news.google.com/rss/search</code></li>
+    <li><strong>YouTube</strong> — Data API v3 query at <code>googleapis.com/youtube/v3/search</code>, authenticated with the API key you provided</li>
+    <li><strong>Any RSS feeds you've configured</strong> — directly to the URL you entered</li>
+  </ul>
+  <p>These requests originate from your device. We are not in the path. We have no log of what subjects you've searched.</p>
+
+  <h2>What GoSosh does not do</h2>
+  <ul>
+    <li>No analytics or telemetry</li>
+    <li>No crash reporting (in this version)</li>
+    <li>No advertising or advertising identifiers</li>
+    <li>No data sold to third parties</li>
+    <li>No data shared with third parties for marketing</li>
+    <li>No tracking across other apps or websites</li>
+    <li>No location data</li>
+    <li>No contacts access</li>
+    <li>No camera, microphone, or photo library access</li>
+  </ul>
+
+  <h2>Subscription billing</h2>
+  <p>GoSosh's subscription is processed entirely by Apple through your Apple Account. We never see your payment method or billing information. Apple handles authentication, billing, renewals, and refunds. You can cancel anytime in iOS Settings &rarr; Apple Account &rarr; Subscriptions.</p>
+
+  <h2>Third-party services</h2>
+  <p>GoSosh queries these public services on your behalf. Each has its own privacy policy:</p>
+  <ul>
+    <li><strong>Google News</strong> — <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    <li><strong>YouTube</strong> — <a href="https://www.youtube.com/t/privacy">youtube.com/t/privacy</a></li>
+    <li><strong>Apple App Store and StoreKit</strong> — <a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></li>
+  </ul>
+  <p>When you tap an article or source link, you open it in an in-app Safari View Controller. Apple manages that session; we are not in the loop for what you read.</p>
+
+  <h2>Children</h2>
+  <p>GoSosh is not directed at children under 13. We do not knowingly collect data from anyone, and certainly not from children.</p>
+
+  <h2>Your rights</h2>
+  <p>You can delete any card or all cards at any time from within the app (Settings &rarr; Data &rarr; Delete all cards). Deletions sync through iCloud and remove the data from your account. To revoke the YouTube API key, clear it in Settings &rarr; Sources &rarr; YouTube.</p>
+  <p>To delete your subscription, cancel in iOS Settings &rarr; Apple Account &rarr; Subscriptions.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If we change this policy materially, we'll update the effective date above and surface a notice in the app on next launch.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy? Reach the developer:</p>
+  <div class="contact-block">
+    <p><strong>Don Bonaddio</strong></p>
+    <p><a href="mailto:don.bonaddio@gmail.com">don.bonaddio@gmail.com</a></p>
+  </div>
+</article>
+
+<footer>
+  <a href="index.html">Home</a>
+  <a href="terms.html">Terms</a>
+  <a href="mailto:don.bonaddio@gmail.com">Support</a>
+  <p style="margin-top: 12px;">&copy; 2026 Don Bonaddio</p>
+</footer>
+
+</body>
+</html>
