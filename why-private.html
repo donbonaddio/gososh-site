@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Every news app says it cares about privacy. We want to be specific about what that means here, because the differences between privacy stories matter — and…">
+<title>Why GoSosh is private — GoSosh</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">GoSosh</a>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="ai.html">How GoSosh uses AI</a>
+      <a href="why-private.html" aria-current="page">Why private</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<h1>Why GoSosh is private</h1>
+<p>Every news app says it cares about privacy. We want to be specific about what that means here, because the differences between privacy stories matter — and they&rsquo;re not visible from outside.</p>
+<h2>The short version</h2>
+<p>GoSosh is the only AI-powered news app we know of where everything the AI does happens on your iPhone. Not &ldquo;we delete the data after,&rdquo; not &ldquo;we anonymize it,&rdquo; not &ldquo;we don&rsquo;t sell it to third parties.&rdquo; Your reading habits do not leave the device at all.</p>
+<p>We could not see what stories you read or which sources you favor even if we wanted to. There is no server holding your data. There is no account. There is no email address we could match you to.</p>
+<p>That&rsquo;s a different category of privacy than what most apps claim, and it&rsquo;s worth understanding why.</p>
+<h2>How most &ldquo;AI-powered&rdquo; reading apps work</h2>
+<p>When you use Perplexity, ChatGPT, Google Discover, Apple News+ AI summaries, or any of the dozens of &ldquo;AI news&rdquo; apps that have launched in 2024–2026, here is what&rsquo;s happening behind the screen:</p>
+<ol>
+<li>You tap an article or query.</li>
+<li>The app sends what you tapped — or your question, or your reading context — to a server.</li>
+<li>That server forwards it to OpenAI / Anthropic / Google / a similar cloud model provider.</li>
+<li>The model generates a response. The provider logs the input for safety, debugging, and (in some terms of service) training future models.</li>
+<li>The response comes back to your phone.</li>
+</ol>
+<p>Steps 2 through 4 are where your reading life leaves your device. Most apps will tell you they don&rsquo;t sell your data. Fewer will tell you that the cloud LLM provider sees every request. Almost none will tell you that, in many cases, &ldquo;we delete it after 30 days&rdquo; actually means the provider keeps it longer than the app does.</p>
+<p>This isn&rsquo;t a scandal — it&rsquo;s just how cloud LLMs work. Models that big don&rsquo;t run on phones yet, so apps that use them have to send your data out.</p>
+<h2>How GoSosh works instead</h2>
+<p>Apple released the Foundation Models framework in iOS 18.1. It&rsquo;s a small language model that runs entirely on the device — fast enough for live use, and never sends data anywhere. We built every AI feature in GoSosh on top of it.</p>
+<p>What that means concretely:</p>
+<ul>
+<li><strong>No OpenAI, Anthropic, or Google API calls.</strong> We don&rsquo;t have accounts with them. There&rsquo;s no key in the app. No cloud LLM is ever invoked.</li>
+<li><strong>No analytics on reading behavior.</strong> We don&rsquo;t ship which articles you opened, which sources you favor, or what topics you spend time on.</li>
+<li><strong>No accounts.</strong> You don&rsquo;t sign up. You don&rsquo;t give us an email. There is no profile.</li>
+<li><strong>No personalization server.</strong> The ranking that surfaces stories for you is computed on your device from sources you&rsquo;ve chosen.</li>
+<li><strong>No &ldquo;anonymized telemetry.&rdquo;</strong> A pattern of reading habits is identifying even without your name attached to it. We don&rsquo;t collect the pattern.</li>
+</ul>
+<p>The trade is real: we don&rsquo;t get to know what features users like, what stories trended, or whether anyone clicks our buttons. We accept that because the alternative is the architecture every other AI app uses, and that architecture doesn&rsquo;t fit our brief.</p>
+<h2>&ldquo;Doesn&rsquo;t on-device AI suck?&rdquo;</h2>
+<p>It&rsquo;s a fair question. The headline numbers go to the giant cloud models — GPT-5, Claude, Gemini Ultra — and they do things smaller on-device models can&rsquo;t.</p>
+<p>What we found building GoSosh is that the specific jobs we need an AI to do — recognizing when two articles are about the same event, extracting which people and companies are being discussed, finding semantic similarity between headlines — fit comfortably within what Apple&rsquo;s on-device model can handle. We&rsquo;re not asking it to write essays. We&rsquo;re asking it to cluster and classify.</p>
+<p>For that work, on-device is good enough, and the privacy delta is huge.</p>
+<h2>What we do collect</h2>
+<p>Honesty section. The app does ship some data — but the list is short and conventional:</p>
+<ul>
+<li><strong>App Store anonymous purchase records</strong> so subscription status works. This is Apple&rsquo;s infrastructure, not ours, and it doesn&rsquo;t carry reading data.</li>
+<li><strong>Crash logs</strong>, if you opt in to send them, via Apple&rsquo;s standard crash reporting. These contain no content from inside the app.</li>
+<li><strong>Source counts</strong> — when you select a category, GoSosh fetches RSS feeds from that category&rsquo;s publishers. Those publishers see a generic request from your phone (same as if you opened their site in Safari). They don&rsquo;t see who you are or what else you read.</li>
+</ul>
+<p>That&rsquo;s it.</p>
+<h2>The principle</h2>
+<p>There is a class of apps that asks you to trust their data handling. There is a smaller class of apps that tries to make trust unnecessary by not having your data in the first place.</p>
+<p>GoSosh is in the second class. That&rsquo;s not a marketing position. It&rsquo;s a design choice that runs through how the app was built, why it&rsquo;s iOS-only, and why we use on-device AI even when cloud AI would be flashier.</p>
+<p>If you&rsquo;ve been waiting for a news app that doesn&rsquo;t read what you read, this is it.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="tagline">The news app that doesn't read what you read.</p>
+    <p class="footer-links">
+      <a href="ai.html">AI</a> ·
+      <a href="why-private.html">Why private</a> ·
+      <a href="faq.html">FAQ</a> ·
+      <a href="about.html">About</a>
+    </p>
+    <p class="footer-links legal">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms</a> ·
+      <a href="support.html">Support</a>
+    </p>
+    <p class="copyright">© 2026 GoSosh.</p>
+  </div>
+</footer>
+</body>
+</html>

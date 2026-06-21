@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Designed to be lifted onto the site as an accordion or a flat scroll. Questions ordered by what a skeptical-but-interested visitor would want to know —…">
+<title>GoSosh FAQ — GoSosh</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">GoSosh</a>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="ai.html">How GoSosh uses AI</a>
+      <a href="why-private.html">Why private</a>
+      <a href="faq.html" aria-current="page">FAQ</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<h1>GoSosh FAQ</h1>
+<p>Designed to be lifted onto the site as an accordion or a flat scroll. Questions ordered by what a skeptical-but-interested visitor would want to know — privacy first, then product, then practical.</p>
+<hr>
+<h2>Privacy &amp; AI</h2>
+<h3>Is GoSosh actually AI-powered, or is that a marketing claim?</h3>
+<p>It&rsquo;s real, but smaller than the marketing on most AI apps would suggest. GoSosh uses Apple&rsquo;s on-device language model (Foundation Models, built into iOS 18+) for two specific jobs: recognizing when multiple sources are covering the same story, and identifying which people and companies are being talked about across articles. We don&rsquo;t generate text, summaries, or commentary. We don&rsquo;t have a chatbot. The AI is doing classification work, not writing.</p>
+<h3>What data leaves my iPhone when I use GoSosh?</h3>
+<p>Nothing about what you read. The app fetches RSS feeds from publishers — those publishers see a request from your phone the same way they&rsquo;d see one from your browser. They don&rsquo;t see your name, your other reading, or which articles you opened. Beyond that: Apple&rsquo;s standard subscription-billing pings (only if you&rsquo;re a paid subscriber), and crash logs if you opt in. That&rsquo;s the full list.</p>
+<h3>Do you have accounts?</h3>
+<p>No. No sign-up. No email collection. No profile. The app works the same on first open as it does on the thousandth.</p>
+<h3>Do you use OpenAI, Anthropic, or Google AI?</h3>
+<p>No. There are no cloud LLM API calls anywhere in GoSosh. The on-device Apple model handles everything we need.</p>
+<h3>Will my reading habits ever be used to train a model?</h3>
+<p>No, because we don&rsquo;t collect them. There&rsquo;s no dataset on our side that could be used to train anything.</p>
+<h3>What about analytics?</h3>
+<p>We don&rsquo;t ship reading-behavior analytics. We don&rsquo;t know which categories users prefer, which articles get the most opens, or how long anyone spends in the app. This makes product decisions harder for us, and we accept that as the cost.</p>
+<h3>Why iOS only?</h3>
+<p>Because we built GoSosh on Apple&rsquo;s Foundation Models framework, which only exists on iOS / iPadOS. Going cross-platform would mean either dropping the on-device AI features or using cloud LLMs to replace them — and either choice would compromise the product. We&rsquo;d rather be sharper on one platform than diluted on two.</p>
+<hr>
+<h2>Product</h2>
+<h3>How is this different from Apple News?</h3>
+<p>Apple News surfaces stories you click into through Apple&rsquo;s editorial choices and ranking. GoSosh shows you the cross-source pattern — which stories are showing up across multiple outlets at once, which voices are being talked about, what&rsquo;s rising before it breaks. Different lens on the same news landscape.</p>
+<h3>How is this different from Perplexity or ChatGPT for news?</h3>
+<p>Both Perplexity and ChatGPT take your question and run it through cloud language models that generate a synthesized answer. GoSosh doesn&rsquo;t generate text — it shows you what publishers actually wrote, ranked and clustered so you can see the pattern. You read the original sources; we just help you decide which ones are worth your time.</p>
+<h3>How is this different from Feedly or Inoreader?</h3>
+<p>Feedly and Inoreader are RSS readers — you subscribe to feeds, they show you items in chronological order. GoSosh does that too, but adds the cross-source intelligence on top: when five outlets cover the same event, you see it once, with all five sources listed. When a topic is rising in coverage volume, that signal is visible. RSS readers don&rsquo;t do that work.</p>
+<h3>What sources does GoSosh use?</h3>
+<p>The current source mix includes RSS feeds from major news publishers (configurable in Settings), Reddit, Hacker News, Bluesky, Mastodon, X / Twitter, YouTube, plus EDGAR and StockTwits for financial topics. We&rsquo;re expanding the curated list of publisher RSS feeds over time.</p>
+<h3>Can I add my own sources?</h3>
+<p>Yes — through Custom Topics (a Pro feature). You can also create custom dashboards focused on specific stocks or topics.</p>
+<h3>Does GoSosh write summaries of articles?</h3>
+<p>No. Tapping a card opens the original publisher&rsquo;s page in an in-app reader. We never paraphrase.</p>
+<h3>Will you add a chatbot?</h3>
+<p>Not currently planned. If a chatbot would meaningfully help users find or understand stories, we&rsquo;d build it — but we haven&rsquo;t found a version of &ldquo;ask the news a question&rdquo; that&rsquo;s better than just reading the source.</p>
+<hr>
+<h2>Practical</h2>
+<h3>How much does it cost?</h3>
+<p>There&rsquo;s a substantial free tier covering all the core widgets and a curated set of categories. Pro is a subscription that unlocks custom topics, multiple dashboards, expanded analytics, and buzz alerts. Pricing and the free trial are shown in the app&rsquo;s paywall — we don&rsquo;t list dollar amounts on the site so we can adjust without ending up with stale copy.</p>
+<h3>What devices does GoSosh work on?</h3>
+<p>iPhone and iPad, on a recent enough iOS to support Apple Intelligence (iOS 18.1+). It works on iPad with a split-view layout designed for the larger screen. We don&rsquo;t have a watchOS app yet but it&rsquo;s on the roadmap.</p>
+<h3>Does it sync between my devices?</h3>
+<p>Your subscription status syncs via Apple&rsquo;s standard StoreKit. Your custom dashboards and topics sync via iCloud (encrypted end-to-end by Apple&rsquo;s CloudKit). Your reading history doesn&rsquo;t sync because we don&rsquo;t store it.</p>
+<h3>What happens if I switch phones?</h3>
+<p>Restore from iCloud the same way you would for any other app. Your subscription, custom dashboards, and topics come with you. There&rsquo;s no GoSosh account to migrate because there&rsquo;s no GoSosh account.</p>
+<h3>Is this an indie project?</h3>
+<p>Yes. Built by one developer. No VC funding, no investors, no growth-at-all-costs pressure. Subscription revenue funds the work directly.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="tagline">The news app that doesn't read what you read.</p>
+    <p class="footer-links">
+      <a href="ai.html">AI</a> ·
+      <a href="why-private.html">Why private</a> ·
+      <a href="faq.html">FAQ</a> ·
+      <a href="about.html">About</a>
+    </p>
+    <p class="footer-links legal">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms</a> ·
+      <a href="support.html">Support</a>
+    </p>
+    <p class="copyright">© 2026 GoSosh.</p>
+  </div>
+</footer>
+</body>
+</html>

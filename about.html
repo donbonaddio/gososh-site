@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A short essay for an &ldquo;About&rdquo; or &ldquo;Story&rdquo; page. Written in first person — you should edit to whichever voice matches the rest of the…">
+<title>Why we built GoSosh — GoSosh</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">GoSosh</a>
+    <nav class="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="ai.html">How GoSosh uses AI</a>
+      <a href="why-private.html">Why private</a>
+      <a href="faq.html">FAQ</a>
+      <a href="about.html" aria-current="page">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+<h1>Why we built GoSosh</h1>
+<p>A short essay for an &ldquo;About&rdquo; or &ldquo;Story&rdquo; page. Written in first person — you should edit to whichever voice matches the rest of the site. Keep it personal but not navel-gazing; the point is the problem, not the founder.</p>
+<hr>
+<p>I started building GoSosh because the news got harder to follow at the exact moment AI was supposed to make it easier.</p>
+<p>In 2023, every reading app added a chatbot. In 2024, every news app added AI-generated summaries. By 2025, &ldquo;AI-powered&rdquo; had stopped meaning anything — every app said it, most of them just meant &ldquo;we send your data to OpenAI and paraphrase what comes back.&rdquo; The summaries got the facts wrong often enough that I&rsquo;d end up reading the original article anyway, which meant the AI layer was costing me time, not saving it.</p>
+<p>What I actually wanted from a news app was the opposite of a chatbot. I wanted to see the pattern across sources — when five different outlets are covering the same event, who&rsquo;s actually being talked about across the day, what&rsquo;s gaining momentum before it breaks. The work of reading is the point. I just wanted help deciding which fifteen minutes of reading were the right fifteen minutes.</p>
+<p>That&rsquo;s a job AI is genuinely good at, when you point it at the right problem. Not &ldquo;write this for me&rdquo; but &ldquo;tell me which of these articles are about the same thing.&rdquo; Not &ldquo;summarize the news&rdquo; but &ldquo;identify which people and companies are showing up across coverage.&rdquo; Classification. Clustering. The boring AI tasks that nobody puts in a launch announcement.</p>
+<p>Apple shipped Foundation Models in iOS 18.1 — a small language model that runs entirely on the phone. Fast enough for live use, never sends data anywhere. It&rsquo;s exactly the right scale for the work I wanted to do. I started building.</p>
+<p>The privacy story fell out of the architecture. If the AI runs on-device, you don&rsquo;t need a server. If there&rsquo;s no server, there&rsquo;s no account. If there&rsquo;s no account, there&rsquo;s no email, no profile, no reading history database somewhere with my name on it. I didn&rsquo;t set out to build a privacy app. I set out to build a news app, and chose the tools that worked. The privacy was a side effect of the tools.</p>
+<p>I think about that side effect a lot now. Every other &ldquo;AI-powered&rdquo; reading product I&rsquo;ve tried sees what I read. Most of them log it. Some of them train on it. None of them have to — the work doesn&rsquo;t require any of that data leaving my phone. The cloud-LLM architecture is convenient for the company building the app, not for the person using it.</p>
+<p>GoSosh is the version I wanted. Small AI doing specific work. No chatbot. No summaries. No data leaving the device. The original sources, one tap away, in a clean reader.</p>
+<p>If that&rsquo;s the version you wanted too, you&rsquo;ll know within ten minutes of using it.</p>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="tagline">The news app that doesn't read what you read.</p>
+    <p class="footer-links">
+      <a href="ai.html">AI</a> ·
+      <a href="why-private.html">Why private</a> ·
+      <a href="faq.html">FAQ</a> ·
+      <a href="about.html">About</a>
+    </p>
+    <p class="footer-links legal">
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="terms.html">Terms</a> ·
+      <a href="support.html">Support</a>
+    </p>
+    <p class="copyright">© 2026 GoSosh.</p>
+  </div>
+</footer>
+</body>
+</html>
