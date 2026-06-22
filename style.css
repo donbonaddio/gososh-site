@@ -94,11 +94,24 @@ body {
 }
 
 .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--fg);
     text-decoration: none;
     letter-spacing: -0.01em;
+}
+
+/* App icon next to the wordmark. iOS app-icon rounding so the
+ * mark reads as the app, not a square logo. */
+.brand-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 7px;
+    flex-shrink: 0;
+    display: block;
 }
 
 .primary-nav {
