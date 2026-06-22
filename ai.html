@@ -27,36 +27,35 @@
 <main class="container">
 <h1>How GoSosh uses AI</h1>
 <p>GoSosh uses AI — but not the way you&rsquo;re probably expecting.</p>
-<p>We don&rsquo;t have a chatbot. We don&rsquo;t summarize the news for you. We don&rsquo;t make up commentary on stories. We don&rsquo;t send your reading habits to OpenAI, Google, or anyone else. The &ldquo;AI Powered&rdquo; sticker on every app in 2026 means almost nothing — usually it means &ldquo;we pay another company to read your data.&rdquo;</p>
+<p>We don&rsquo;t have a chatbot. We don&rsquo;t summarize what people are saying for you. We don&rsquo;t make up commentary. We don&rsquo;t send your tracking interests to OpenAI, Google, or anyone else. The &ldquo;AI Powered&rdquo; sticker on every app in 2026 means almost nothing — usually it means &ldquo;we pay another company to read your data.&rdquo;</p>
 <p>What GoSosh actually does with AI is more specific, and we think more useful.</p>
-<h2>On-device intelligence — your reading stays on your phone</h2>
-<p>Every AI feature in GoSosh runs on your iPhone using <strong>Apple Intelligence&rsquo;s on-device language model</strong>. No accounts. No servers seeing what you read. No &ldquo;your data helps train our model&rdquo; fine print buried on page 14.</p>
-<p>When you read GoSosh, nobody outside your phone knows what you read.</p>
+<h2>On-device intelligence — your tracking stays on your phone</h2>
+<p>Every AI feature in GoSosh runs on your iPhone using <strong>Apple Intelligence&rsquo;s on-device language model</strong>. No accounts. No servers seeing what you&rsquo;re tracking. No &ldquo;your interests help train our model&rdquo; fine print buried on page 14.</p>
+<p>When you use GoSosh, nobody outside your phone knows which topics you watch, which stocks you follow, or which conversations you&rsquo;re tuned into.</p>
 <p>That includes us.</p>
 <h2>Where the AI actually shows up</h2>
-<h3>Knowing when five sources are covering the same story</h3>
-<p>The Cross-Source widget shows you stories with multi-source confirmation: &ldquo;five outlets covered this in the last 24 hours.&rdquo; That widget only works because GoSosh recognizes when &ldquo;OpenAI launches GPT-5&rdquo; and &ldquo;Altman unveils new model at developer day&rdquo; are about the same event, even though they share zero meaningful keywords.</p>
-<p>A keyword-matching approach would miss that. The on-device language model catches it.</p>
+<h3>Knowing when five sources are talking about the same thing</h3>
+<p>The Cross-Source widget shows you what has multi-source confirmation — &ldquo;five sources are talking about this.&rdquo; That widget only works because GoSosh recognizes when &ldquo;OpenAI launches GPT-5&rdquo; and &ldquo;Altman unveils new model at developer day&rdquo; are about the same event, even though they share zero meaningful keywords. Whether you&rsquo;re tracking a tech topic, a stock event, a sports trade, or a niche conversation, the on-device language model catches the connections a keyword filter would miss.</p>
 <h3>Surfacing who&rsquo;s actually being talked about</h3>
-<p>The Most Mentioned widget — the names you see ranked with counts — isn&rsquo;t a frequency count of words. It&rsquo;s an entity extraction pass. The language model reads every article title and snippet, identifies the people, companies, and organizations being discussed, and ranks them by real volume across sources.</p>
-<p>That&rsquo;s why &ldquo;Apple&rdquo; doesn&rsquo;t get inflated by sentences like &ldquo;an apple a day&rdquo; and why &ldquo;Tim Cook&rdquo; gets credit when an article refers to him as &ldquo;Apple&rsquo;s CEO.&rdquo;</p>
+<p>The Most Mentioned widget — the names you see ranked with counts — isn&rsquo;t a frequency count of words. It&rsquo;s an entity extraction pass. The language model reads every item&rsquo;s title and snippet, identifies the people, companies, and organizations being discussed, and ranks them by real volume across sources.</p>
+<p>That&rsquo;s why &ldquo;Apple&rdquo; doesn&rsquo;t get inflated by sentences like &ldquo;an apple a day,&rdquo; and why &ldquo;Tim Cook&rdquo; gets credit when an item refers to him as &ldquo;Apple&rsquo;s CEO.&rdquo;</p>
 <h3>Quiet Movers — the early-signal widget</h3>
-<p>Stories that are rising in coverage but haven&rsquo;t broken into the top trending tier. The under-the-radar item now that might be top of the news cycle tomorrow. This combines the same entity extraction with a volume-delta calculation to find stories with momentum that the frontpage hasn&rsquo;t caught up to yet.</p>
+<p>Topics rising in conversation volume but not yet at the top of the feed. The under-the-radar item now that might dominate tomorrow. This combines the same entity extraction with a volume-delta calculation to find signal with momentum that hasn&rsquo;t broken through yet.</p>
 <h2>What GoSosh doesn&rsquo;t do</h2>
 <ul>
-<li><strong>No chatbot.</strong> No &ldquo;ask the news a question&rdquo; experience. We think those are mostly demos that don&rsquo;t survive contact with real reading habits.</li>
-<li><strong>No AI-written summaries.</strong> We don&rsquo;t paraphrase articles. We send you to the original publisher every time.</li>
+<li><strong>No chatbot.</strong> No &ldquo;ask GoSosh a question&rdquo; experience. We think those are mostly demos that don&rsquo;t survive contact with real use.</li>
+<li><strong>No AI-written summaries.</strong> We don&rsquo;t paraphrase what&rsquo;s being said. We send you to the original source every time.</li>
 <li><strong>No hallucinations.</strong> Because we don&rsquo;t generate text, we don&rsquo;t make things up.</li>
 <li><strong>No cloud LLM calls.</strong> No OpenAI API, no Anthropic API, no Gemini. Nothing leaves your device for AI processing.</li>
 </ul>
 <h2>The principle behind it</h2>
-<p>We use AI where it does something a keyword search can&rsquo;t — finding semantic relationships between stories that you&rsquo;d otherwise miss. We don&rsquo;t use AI to replace your judgment, your reading, or your time with the original source.</p>
+<p>We use AI where it does something a keyword search can&rsquo;t — finding semantic relationships across the things you&rsquo;re tracking that you&rsquo;d otherwise miss. We don&rsquo;t use AI to replace your judgment, your reading, or your time with the original source.</p>
 <p>If &ldquo;AI Powered&rdquo; makes you skeptical, you should be. Most of the time it means a chatbot bolted onto a feature that didn&rsquo;t need one. The honest pitch for GoSosh is more boring: small amounts of AI, applied to specific problems, running where your data lives.</p>
 </main>
 
 <footer class="site-footer">
   <div class="container">
-    <p class="tagline">The news app that doesn't read what you read.</p>
+    <p class="tagline">Track the conversation. Privately.</p>
     <p class="footer-links">
       <a href="ai.html">AI</a> ·
       <a href="why-private.html">Why private</a> ·

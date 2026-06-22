@@ -13,15 +13,28 @@
 
 /* ---- Variables ---- */
 
+/* Light theme — reverted to white background after dark theme made
+ * the icon hard to see on the page (the icon's own near-black
+ * backdrop blended into the dark page no matter how visible we
+ * made the framing border). The light bg was the original working
+ * design where the icon's orange radar design popped naturally.
+ *
+ * Dark-theme variables kept here commented in case we revisit
+ * with a transparent/light-variant icon someday:
+ *   --bg: #0d0d0e;   --fg: #f0ede8;   --fg-muted: #b0aca6;
+ *   --fg-tertiary: #807c76;   --accent: #f08160;
+ *   --accent-dark: #d65d3a;   --border: #2a2a2c;
+ *   --surface: #18181a;   --code-bg: #1a1a1c;
+ */
 :root {
     --bg: #ffffff;
     --fg: #1a1a1a;
     --fg-muted: #5a5a5a;
     --fg-tertiary: #8a8a8a;
-    --accent: #d65d3a;          /* GoSosh coral */
+    --accent: #d65d3a;            /* GoSosh coral */
     --accent-dark: #b34a2c;
     --border: #e8e6e0;
-    --surface: #faf8f5;          /* cream */
+    --surface: #faf8f5;            /* cream */
     --code-bg: #f4f1ec;
 
     --maxw: 42rem;
@@ -30,20 +43,6 @@
     --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
                  Roboto, Helvetica, Arial, sans-serif;
     --font-serif: "New York", "Charter", "Georgia", "Iowan Old Style", serif;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bg: #0d0d0e;
-        --fg: #f0ede8;
-        --fg-muted: #b0aca6;
-        --fg-tertiary: #807c76;
-        --accent: #f08160;
-        --accent-dark: #d65d3a;
-        --border: #2a2a2c;
-        --surface: #18181a;
-        --code-bg: #1a1a1c;
-    }
 }
 
 /* ---- Reset / base ---- */
@@ -96,22 +95,36 @@ body {
 .brand {
     display: inline-flex;
     align-items: center;
-    gap: 0.55rem;
-    font-size: 1.25rem;
+    gap: 0.7rem;                 /* a touch more breathing room for 64px icon */
+    font-size: 1.5rem;            /* bumped from 1.25 to balance bigger icon */
     font-weight: 700;
     color: var(--fg);
     text-decoration: none;
     letter-spacing: -0.01em;
 }
 
-/* App icon next to the wordmark. iOS app-icon rounding so the
- * mark reads as the app, not a square logo. */
+/* App icon next to the wordmark. Doubled from 32px to 64px per
+ * Don's call so the brand reads more confidently on first glance.
+ * iOS app-icon rounding (14px on a 64px tile is the iOS 16+ default
+ * ratio) so the mark reads as "the app," not a generic square logo.
+ *
+ * The 1px inset highlight + soft drop shadow are deliberate on
+ * dark backgrounds: an icon whose own backdrop is dark would
+ * otherwise disappear into the page. The highlight gives it an
+ * edge; the shadow lifts it. Both are barely perceptible on
+ * light backgrounds, so this works either way. */
 .brand-icon {
-    width: 32px;
-    height: 32px;
-    border-radius: 7px;
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
     flex-shrink: 0;
     display: block;
+    /* Light, conventional iOS app-icon presentation — barely-there
+     * stroke + subtle drop shadow for visual weight against the
+     * white page. The icon's own design carries the brand. */
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
 }
 
 .primary-nav {
