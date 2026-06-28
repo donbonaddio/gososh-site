@@ -30,7 +30,7 @@
 <h3>Is GoSosh actually AI-powered, or is that a marketing claim?</h3>
 <p>It&rsquo;s real, but smaller than the marketing on most AI apps would suggest. GoSosh uses Apple&rsquo;s on-device language model (Foundation Models, built into iOS 18+) for two specific jobs: recognizing when multiple sources are talking about the same thing, and identifying which people and companies are being discussed across items. We don&rsquo;t generate text, summaries, or commentary. We don&rsquo;t have a chatbot. The AI is doing classification work, not writing.</p>
 <h3>What data leaves my iPhone when I use GoSosh?</h3>
-<p>Nothing about what you track. The app fetches RSS feeds, APIs, and public endpoints from sources you&rsquo;ve chosen — those sources see a request from your phone the same way they&rsquo;d see one from your browser. They don&rsquo;t see your name, your other tracking interests, or which items you opened. Beyond that: Apple&rsquo;s standard subscription-billing pings (only if you&rsquo;re a paid subscriber), and crash logs if you opt in. That&rsquo;s the full list.</p>
+<p>Nothing about your tracking preferences — which topics you watch, which sources you&rsquo;ve enabled, which dashboards you&rsquo;ve built, which alerts you&rsquo;ve set. The app fetches RSS feeds, APIs, and public endpoints from sources you&rsquo;ve chosen — those sources see a request from your phone the same way they&rsquo;d see one from your browser. They don&rsquo;t see your name, your other tracking interests, or which items you opened. When a feed item arrives without a cover image, the article URL is sent to our own image-lookup service (<code>api.donbon.com</code>) so the card can have a hero image; that service sees only the URL, not your identity, and you can turn it off in Settings → Image lookup. Beyond that: Apple&rsquo;s standard subscription-billing pings (only if you&rsquo;re a paid subscriber), and crash logs if you opt in. The &ldquo;Why private&rdquo; page has the full architecture if you want to dig in.</p>
 <h3>Do you have accounts?</h3>
 <p>No. No sign-up. No email collection. No profile. The app works the same on first open as it does on the thousandth.</p>
 <h3>Do you use OpenAI, Anthropic, or Google AI?</h3>
@@ -75,7 +75,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p class="tagline">Track the conversation. Privately.</p>
+    <p class="tagline">Buzz, customized. GoSosh!</p>
     <p class="footer-links">
       <a href="ai.html">AI</a> ·
       <a href="why-private.html">Why private</a> ·

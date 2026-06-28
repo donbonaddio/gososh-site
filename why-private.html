@@ -28,8 +28,8 @@
 <h1>Why GoSosh is private</h1>
 <p>Every app says it cares about privacy. We want to be specific about what that means here, because the differences between privacy stories matter — and they&rsquo;re not visible from outside.</p>
 <h2>The short version</h2>
-<p>GoSosh is the only AI-powered conversation-tracking app we know of where everything the AI does happens on your iPhone. Not &ldquo;we delete the data after,&rdquo; not &ldquo;we anonymize it,&rdquo; not &ldquo;we don&rsquo;t sell it to third parties.&rdquo; Your tracking interests do not leave the device at all.</p>
-<p>We could not see what topics you watch, which stocks you follow, or which conversations you&rsquo;re tuned into even if we wanted to. There is no server holding your data. There is no account. There is no email address we could match you to.</p>
+<p>GoSosh is the only AI-powered conversation-tracking app we know of where everything the AI does happens on your iPhone. Not &ldquo;we delete the data after,&rdquo; not &ldquo;we anonymize it,&rdquo; not &ldquo;we don&rsquo;t sell it to third parties.&rdquo; Your tracking preferences and reading patterns do not leave the device — with one specific exception that we describe in detail below.</p>
+<p>We could not see what topics you watch, which stocks you follow, or which conversations you&rsquo;re tuned into even if we wanted to. There is no server holding your reading history. There is no account. There is no email address we could match you to.</p>
 <p>That&rsquo;s a different category of privacy than what most apps claim, and it&rsquo;s worth understanding why.</p>
 <h2>How most &ldquo;AI-powered&rdquo; tracking apps work</h2>
 <p>When you use Perplexity, ChatGPT, Google Discover, Apple News+ AI summaries, or any of the dozens of &ldquo;AI&rdquo; apps that have launched in 2024–2026, here is what&rsquo;s happening behind the screen:</p>
@@ -57,12 +57,23 @@
 <p>It&rsquo;s a fair question. The headline numbers go to the giant cloud models — GPT-5, Claude, Gemini Ultra — and they do things smaller on-device models can&rsquo;t.</p>
 <p>What we found building GoSosh is that the specific jobs we need an AI to do — recognizing when two sources are talking about the same event, extracting which people and companies are being discussed, finding semantic similarity between items — fit comfortably within what Apple&rsquo;s on-device model can handle. We&rsquo;re not asking it to write essays. We&rsquo;re asking it to cluster and classify.</p>
 <p>For that work, on-device is good enough, and the privacy delta is huge.</p>
+<h2>One thing that does leave the device</h2>
+<p>There is one place where GoSosh does talk to a server: when an article in your feed doesn&rsquo;t come with a cover image attached, we send the article&rsquo;s URL to a small service we run ourselves (<code>api.donbon.com</code> — a tiny Cloudflare worker) that finds the cover image and sends it back. This is what gives the magazine-style cards in the Expanded view their hero images.</p>
+<p>We want to be specific about what this service sees and what it doesn&rsquo;t:</p>
+<ul>
+<li><strong>It sees the URL of the article being looked up.</strong> That&rsquo;s it. No account identifier (there are no accounts). No device fingerprint. No correlation to your other tracking activity. No &ldquo;user N opened article X&rdquo; log line. The service is not architected to know who you are; it cannot know.</li>
+<li><strong>It caches the lookup result globally.</strong> Once any GoSosh user, ever, has looked up a given article URL, every subsequent lookup of that URL returns instantly from the cache without any scraping. That cache is the only persistent state the service has.</li>
+<li><strong>We built it ourselves.</strong> The alternative paths were a cloud LLM (sends URLs to OpenAI / Anthropic), a third-party scraping service (sends URLs to a company optimizing for their incentives, not ours), or a &ldquo;free&rdquo; image-preview API (same problem). We built our own service so that the URL lookup is governed by the same person who built the app and writes its privacy page.</li>
+<li><strong>You can turn it off.</strong> Open Settings → Image lookup and flip the toggle off. You&rsquo;ll see fewer hero images on cards from publishers whose RSS feeds don&rsquo;t include them — but no off-device requests will be made.</li>
+</ul>
+<p>This is the smallest compromise we could find that still produced a feed worth reading. We are spelling it out here rather than burying it in a legal page because it is a real architectural choice and we would rather you make it knowingly.</p>
 <h2>What we do collect</h2>
 <p>Honesty section. The app does ship some data — but the list is short and conventional:</p>
 <ul>
 <li><strong>App Store anonymous purchase records</strong> so subscription status works. This is Apple&rsquo;s infrastructure, not ours, and it doesn&rsquo;t carry tracking data.</li>
 <li><strong>Crash logs</strong>, if you opt in to send them, via Apple&rsquo;s standard crash reporting. These contain no content from inside the app.</li>
 <li><strong>Source requests</strong> — when you select a topic, GoSosh fetches RSS feeds and APIs from that topic&rsquo;s sources. Those sources see a generic request from your phone (same as if you opened their site in Safari). They don&rsquo;t see who you are or what else you&rsquo;re tracking.</li>
+<li><strong>Article URLs for image lookup</strong> — when a feed item arrives without a cover image, the article URL is sent to our own service (<code>api.donbon.com</code>) for a hero-image lookup. The service sees the URL, nothing else. Full architecture is in the &ldquo;One thing that does leave the device&rdquo; section above. You can turn this off in Settings → Image lookup.</li>
 </ul>
 <p>That&rsquo;s it.</p>
 <h2>The principle</h2>
@@ -73,7 +84,7 @@
 
 <footer class="site-footer">
   <div class="container">
-    <p class="tagline">Track the conversation. Privately.</p>
+    <p class="tagline">Buzz, customized. GoSosh!</p>
     <p class="footer-links">
       <a href="ai.html">AI</a> ·
       <a href="why-private.html">Why private</a> ·
