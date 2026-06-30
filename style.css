@@ -287,6 +287,28 @@ main hr {
     color: var(--fg-tertiary);
 }
 
+/* "More apps from Don's Tech →" cross-promo line. Subtle treatment
+ * — dotted underline, muted color — so it reads as a footer nav
+ * link rather than a content CTA. */
+.site-footer .umbrella {
+    margin: 0.5rem 0 0.8rem;
+    font-size: 0.92rem;
+    color: var(--fg-muted);
+}
+
+.site-footer .umbrella a {
+    color: var(--fg-muted);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--fg-tertiary);
+    padding-bottom: 1px;
+    transition: color 0.15s ease, border-bottom-color 0.15s ease;
+}
+
+.site-footer .umbrella a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
 .site-footer .copyright {
     color: var(--fg-tertiary);
     font-size: 0.85rem;
