@@ -353,3 +353,29 @@ main hr {
     width: auto;
     display: block;
 }
+
+/* Prominent download CTA — a coral pill, hard to miss, no image needed. */
+.cta-download {
+    display: inline-block;
+    margin: 0;
+    padding: 0.85rem 2rem;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.08rem;
+    text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(214, 90, 58, 0.35);
+    transition: background 0.15s ease, transform 0.08s ease;
+}
+
+.cta-download:hover {
+    background: var(--accent-dark);
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+.cta-download-wrap {
+    text-align: center;
+    margin: 1.75rem 0;
+}
