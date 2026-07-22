@@ -170,7 +170,7 @@
 
   <h3>On your device</h3>
   <ul>
-    <li>The cards you create (subject + lens + cadence + per-source overrides).</li>
+    <li>The cards, topics, and dashboards you create, plus your app settings (refresh cadence, source toggles).</li>
     <li>Your YouTube Data API key, if you've added one in Settings.</li>
     <li>Your Plus purchase state, as reported by Apple's StoreKit.</li>
     <li>Your app preferences (default cadence, source toggles, onboarding state).</li>
@@ -183,13 +183,15 @@
   </ul>
 
   <h2>What GoSosh sends, and where</h2>
-  <p>When the app refreshes a card, it sends a query to public data sources:</p>
+  <p>When the app refreshes a card, it queries public data sources directly from your device. Depending on the card and category, these can include:</p>
   <ul>
-    <li><strong>Google News</strong> — RSS feed query at <code>news.google.com/rss/search</code></li>
-    <li><strong>YouTube</strong> — Data API v3 query at <code>googleapis.com/youtube/v3/search</code>, authenticated with the API key you provided</li>
-    <li><strong>Any RSS feeds you've configured</strong> — directly to the URL you entered</li>
+    <li><strong>News &amp; web</strong> — Google News RSS, RSS feeds from major publishers, and any RSS feeds you add yourself</li>
+    <li><strong>Social &amp; community</strong> — Reddit, Hacker News, Bluesky, Mastodon, and X / Twitter, via their public endpoints</li>
+    <li><strong>Video</strong> — YouTube Data API, authenticated with the API key you provide</li>
+    <li><strong>Financial</strong> — EDGAR and StockTwits, for stock and company topics</li>
   </ul>
-  <p>These requests originate from your device. We are not in the path. We have no log of what subjects you've searched.</p>
+  <p>Each request carries only the query for the subject you're tracking — those services see a request from your device the same way they'd see one from your browser. The requests originate from your device; we are not in the path, and we have no log of what you've searched.</p>
+  <p>One exception: when a feed item arrives with no cover image, just that article's URL is sent to our image-lookup service (<code>api.donbon.com</code>) so the card can show a hero image. That service sees only the URL, never your identity — and you can turn it off in Settings &rarr; Image lookup.</p>
 
   <h2>What GoSosh does not do</h2>
   <ul>
