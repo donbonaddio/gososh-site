@@ -16,7 +16,6 @@
     </a>
     <nav class="primary-nav">
       <a href="index.html">Home</a>
-      <a href="how.html">How it works</a>
       <a href="ai.html">How GoSosh uses AI</a>
       <a href="why-private.html">Why private</a>
       <a href="faq.html" aria-current="page">FAQ</a>
@@ -31,7 +30,7 @@
 <h3>Is GoSosh actually AI-powered, or is that a marketing claim?</h3>
 <p>It&rsquo;s real, but smaller than the marketing on most AI apps would suggest. GoSosh uses Apple&rsquo;s on-device language model (Foundation Models, built into iOS 18+) for two specific jobs: recognizing when multiple sources are talking about the same thing, and identifying which people and companies are being discussed across items. We don&rsquo;t generate text, summaries, or commentary. We don&rsquo;t have a chatbot. The AI is doing classification work, not writing.</p>
 <h3>What data leaves my iPhone when I use GoSosh?</h3>
-<p>Nothing about your tracking preferences — which topics you watch, which sources you&rsquo;ve enabled, which dashboards you&rsquo;ve built, which alerts you&rsquo;ve set. The app fetches RSS feeds, APIs, and public endpoints from sources you&rsquo;ve chosen — those sources see a request from your phone the same way they&rsquo;d see one from your browser. They don&rsquo;t see your name, your other tracking interests, or which items you opened. When a feed item arrives without a cover image, the article URL is sent to our own image-lookup service (<code>api.donbon.com</code>) so the card can have a hero image; that service sees only the URL, not your identity, and you can turn it off in Settings → Image lookup. Beyond that: Apple&rsquo;s standard App Store purchase check (only if you&rsquo;ve bought Plus), and crash logs if you opt in. The &ldquo;Why private&rdquo; page has the full architecture if you want to dig in.</p>
+<p>Nothing about your tracking preferences — which topics you watch, which sources you&rsquo;ve enabled, which dashboards you&rsquo;ve built, which alerts you&rsquo;ve set. The app fetches RSS feeds, APIs, and public endpoints from sources you&rsquo;ve chosen — those sources see a request from your phone the same way they&rsquo;d see one from your browser. They don&rsquo;t see your name, your other tracking interests, or which items you opened. When a feed item arrives without a cover image, the article URL is sent to our own image-lookup service (<code>api.donbon.com</code>) so the card can have a hero image; that service sees only the URL, not your identity, and you can turn it off in Settings → Image lookup. Beyond that: Apple&rsquo;s standard purchase-record pings (only if you&rsquo;ve bought Plus), and crash logs if you opt in. The &ldquo;Why private&rdquo; page has the full architecture if you want to dig in.</p>
 <h3>Do you have accounts?</h3>
 <p>No. No sign-up. No email collection. No profile. The app works the same on first open as it does on the thousandth.</p>
 <h3>Do you use OpenAI, Anthropic, or Google AI?</h3>
@@ -45,7 +44,7 @@
 <hr>
 <h2>Product</h2>
 <h3>What can I track with GoSosh?</h3>
-<p>Anything that produces signal across multiple sources. The built-in categories cover News, Financial, Sports, and Tech. Beyond that, you can create custom topics for companies, people, stocks, sports teams, products, niches, or anything else you care about. Plus adds a dedicated Stock Dashboard for tracking tickers, plus Buzz Alerts that notify you when activity spikes past your threshold.</p>
+<p>Anything that produces signal across multiple sources. The built-in categories cover News, Financial, Sports, and Tech. Beyond that, you can create custom topics for companies, people, stocks, sports teams, products, niches, or anything else you care about. Plus adds a dedicated Stock Dashboard for tracking tickers, and Buzz Alerts that notify you when activity spikes past your threshold.</p>
 <h3>How is this different from Apple News?</h3>
 <p>Apple News surfaces items through Apple&rsquo;s editorial choices and ranking. GoSosh shows you the cross-source pattern — which topics are showing up across multiple sources at once, who&rsquo;s being talked about, what&rsquo;s gaining momentum before it breaks. Different lens, broader scope (Apple News is news-only; GoSosh covers social, creators, financial data, and custom topics too).</p>
 <h3>How is this different from Perplexity or ChatGPT?</h3>
@@ -63,13 +62,13 @@
 <hr>
 <h2>Practical</h2>
 <h3>How much does it cost?</h3>
-<p>There&rsquo;s a substantial free tier covering all the core widgets and a curated set of categories. Plus is a <strong>one-time purchase</strong> — never a subscription — that unlocks Custom Topics, multiple dashboards, expanded analytics, the Stock Dashboard, and Buzz Alerts. It comes with a 7-day free trial. Pricing is shown in the app&rsquo;s paywall; we don&rsquo;t list the dollar amount on the site so we can adjust without ending up with stale copy.</p>
+<p>There&rsquo;s a substantial free tier covering all the core widgets and a curated set of categories. Plus is a <strong>one-time purchase</strong> — buy it once and it&rsquo;s yours, no subscription, nothing recurring — that unlocks Custom Topics, multiple dashboards, expanded analytics, the Stock Dashboard, and Buzz Alerts. There&rsquo;s a free trial so you can try everything first. Pricing is shown in the app&rsquo;s paywall — we don&rsquo;t list dollar amounts on the site so we can adjust without ending up with stale copy.</p>
 <h3>What devices does GoSosh work on?</h3>
 <p>iPhone and iPad, on a recent enough iOS to support Apple Intelligence (iOS 18.1+). It works on iPad with a split-view layout designed for the larger screen. We don&rsquo;t have a watchOS app yet but it&rsquo;s on the roadmap.</p>
 <h3>Does it sync between my devices?</h3>
 <p>Your Plus purchase syncs via Apple&rsquo;s standard StoreKit. Your custom dashboards and topics sync via iCloud (encrypted end-to-end by Apple&rsquo;s CloudKit). Your tracking history doesn&rsquo;t sync because we don&rsquo;t store it.</p>
 <h3>What happens if I switch phones?</h3>
-<p>Restore from iCloud the same way you would for any other app. Your Plus purchase, custom dashboards, and topics come with you. There&rsquo;s no GoSosh account to migrate because there&rsquo;s no GoSosh account.</p>
+<p>Restore from iCloud the same way you would for any other app. Your Plus unlock, custom dashboards, and topics come with you. There&rsquo;s no GoSosh account to migrate because there&rsquo;s no GoSosh account.</p>
 <h3>Is this an indie project?</h3>
 <p>Yes. Built by one developer. No VC funding, no investors, no growth-at-all-costs pressure. Plus purchases fund the work directly.</p>
 </main>
